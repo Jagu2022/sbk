@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>starbootstrap1</title>
     <style>
+        body{
+            background-color: white;
+        }
+        @media only screen and (max-width:1200px) {
+            
+            header img{
+            display: none;
+            }
+            header{
+                text-align: center;
+            }
+            .bgblack{
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            .ulBtns{
+                display: flex;
+                
+                justify-content: center;
+            }
+            .sec1{
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .block1 > h3{
+                font-weight: 400;
+                padding: 20px;
+                text-align: center;
+            }
+            .sect2{
+                display: flex;
+                flex-direction: column;
+            }
+            .sect3{
+                height: 190px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+        }
+
         *{
             margin: 0;
             padding: 0;
@@ -58,6 +101,7 @@
             padding: 5px 8%;
         }
         header img{
+            overflow-clip-margin: content-box;
             margin: 40px 0 50px 50px;
             border-radius: 10px;
         }
@@ -97,6 +141,12 @@
         }
         header h1{
             font-size: 3em;
+            
+        }
+        header h1:hover{
+            background: -webkit-linear-gradient(220deg,#f5c30c, #f0af0c,rgb(227, 52, 142));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         header p{
             color: darkgray;
@@ -153,7 +203,7 @@
             font-size: 20px;
             line-height: 30px;
             position: absolute;
-            top: 50%;
+            top: 45%;
             left: 50%;
             
             transform: translate(-50%,-50%);
@@ -193,7 +243,7 @@
         .sect2{
             display: flex; 
             justify-content: space-around;
-            
+           
         }
         .card{
             display: flex;
@@ -204,6 +254,7 @@
             border-radius: 10px;
             box-shadow: 0px 6px 8px lightgray;
             margin: 10px;
+            cursor: pointer;
             
         }
         .card img{
