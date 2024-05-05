@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secondLargestNum</title>
+</head>
+<body>
+    <h1>secondLargestNum</h1>
+    <script>
+        const secLargNum = (nums) => {
+            let largest = Number.NEGATIVE_INFINITY
+            let secLarg = Number.NEGATIVE_INFINITY
+
+            for(let i=0; i<nums.length; i++){
+                if(nums[i] > largest) {
+                    secLarg = largest
+                    largest = nums[i]
+                }else if(nums[i] != largest && nums[i] > secLarg) {
+                    secLarg = nums[i]
+                }
+            }
+            return secLarg
+        }
+        console.log(secLargNum([2,9,3,7,39,36,37,24]))
+    </script>
+</body>
+</html>
