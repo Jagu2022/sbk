@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promise all,allSettled, race, any</h1>
+    <script>
+        const promise1 = (num) => {
+            return new Promise((res, rej) => {
+                setTimeout(() => {
+                    if(num > 5) {
+                        res('it is promise1 resolve')
+                    }else{
+                        rej('it is promise1 reject')
+                    }
+                },1000)
+            })
+        }
+        const promise2 = (num) => {
+            return new Promise((res, rej) => {
+                setTimeout(() => {
+                    if(num > 5) {
+                        res('it is promise2 resolve')
+                    }else{
+                        rej('it is promise2 reject')
+                    }
+                },2000)
+            })
+        }
+        const promise3 = (num) => {
+            return new Promise((res, rej) => {
+                setTimeout(() => {
+                    if(num > 5) {
+                        res('it is promise3 resolve')
+                    }else{
+                        rej('it is promise3 reject')
+                    }
+                },3000)
+            })
+        }
+        Promise.any([promise1(2), promise2(2), promise3(2)]).then((val) => {
+            console.log(val)
+        }).catch((val) => {
+            console.log(val.errors)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>starbootstrap1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        li{
+            list-style: none;
+        }
+        .bgblack{
+            background-color: rgb(25, 26, 38);
+            color: white;
+        }
+        .title h3{
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .title h3:hover{
+            background: -webkit-linear-gradient(180deg,#f5c30c, #d10cf0,rgb(227, 52, 142));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .items{
+            color: rgb(192, 186, 186);
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 8%;
+        }
+        .items{
+            display: flex;
+        }
+        .items li{
+            
+            padding: 5px;
+            cursor: pointer;
+        }
+        .items li:hover{
+            background: -webkit-linear-gradient(180deg,#f5c30c, #d10cf0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 8%;
+        }
+        header img{
+            margin: 40px 0 50px 50px;
+            border-radius: 10px;
+        }
+        .ulBtns{
+            display: flex;
+            
+        }
+        .ulBtns li{
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+        .ulBtns button{
+            height: 40px;
+            width: 120px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .start button{
+            background-color: dodgerblue;
+            color: white;
+            cursor: pointer;
+        }
+        .start button:hover{
+            background-color: rgb(21, 122, 224);
+        }
+        .leran button{
+            background-color: rgb(25, 26, 38);
+            color: white;
+            cursor: pointer;
+            border: 1px solid white;
+        }
+        .leran button:hover{
+            background-color: white;
+            color:  rgb(25, 26, 38);
+        }
+        header h1{
+            font-size: 3em;
+        }
+        header p{
+            color: darkgray;
+            margin-top: 10px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        .sec1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 8%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .sec1 h3{
+            font-size: 40px;
+            padding-right: 20px;
+            margin-right: 10px;
+
+        }
+        .block2{
+            
+            padding: 10px;
+        }
+        .block3{
+            padding: 10px;
+           
+        }
+        .pbold{
+            font-size: 20px;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .plite{
+            font-size: 15px;
+            line-height: 30px;
+        }
+        .block{
+            margin-bottom: 30px;
+        }
+        .sec2{
+            height: 300px;
+            width: 100%;
+            background-color: rgb(240, 240, 240);
+            position: relative;
+            
+        }
+        .text-italic i{
+            width: 550px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            
+            transform: translate(-50%,-50%);
+        }
+        .review-name p{
+            position: relative;
+            top: 230px;
+            text-align: center;
+        }
+        .sp-blue{
+            color: rgb(16, 131, 245);
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .sec3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 8%;
+        }
+        .sect1{
+            text-align: center;
+            line-height: 40px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .sect1 h3{
+            font-size: 25px;
+        }
+        .sect1 p{
+            color: rgb(126, 122, 122);
+            font-size: 20px;
+            line-height: 30px;
+            width: 500px;
+        }
+        
+        .sect2{
+            display: flex; 
+            justify-content: space-around;
+            
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 500px;
+            justify-content: space-evenly;
+            border-radius: 10px;
+            box-shadow: 0px 6px 8px lightgray;
+            margin: 10px;
+            
+        }
+        .card img{
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .cart_p p{
+            font-size: 15px;
+            color: rgb(126, 122, 122);
+        }
+        .pad{
+            padding: 0 40px;
+            
+        }
+        .news p{
+            background-color: dodgerblue;
+            
+            border-radius: 15px;
+            padding: 2px 4px 2px 4px;
+            color: white;
+            font-size: 13px;
+            height: 20px;
+            width: 50px;
+            text-align: center;
+            padding-bottom: 22px;
+        }
+        .porfile{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: lightgray;
+            margin-right: 20px;
+            
+        }
+        .cart_profile{
+            display: flex;
+            margin: 10px 10px 10px 0px;
+        }
+        .cart_title p{
+            font-size: 25px;
+            font-weight: 30px;
+        }
+        .sect3{
+           
+           padding: 40px 2%;
+           margin-left: 50px;
+           margin-right: 50px;
+           width: 100%;
+           display: flex;
+           justify-content: space-between;
+           background-color: dodgerblue;
+           margin-top: 40px;
+           margin-bottom: 40px;
+           border-radius: 10px;
+           color: white;
+
+        }
+        .sect3 p{
+            font-size: 13px;
+            color: rgb(175, 205, 235);
+        }
+        .sect3 h3{
+            font-size: 20px;
+        }
+        .left_input{
+            border: 1px solid white;
+            width: 270px;
+            height: 40px;
+            border-radius: 10px;
+        }
+        .left_input input{
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            outline: none;
+            border: none;
+            padding: 10px;
+        }
+        .left_input button{
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 8%;
+            margin-top: 20px;
+        }
+        .foot-li{
+            display: flex;
+            
+        }
+        .foot-li li{
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- main -->
+    <main>
+        <!-- navbar -->
+        <nav class="bgblack nav">
+            <div class="title">
+                <h3>SBK</h3>
+            </div>
+            <div class="menu_items">
+                <ul class="items">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Technologys</li>
+                    <li>Portfolio</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- header -->
+        <header class="bgblack">
+            <div>
+                <h1>A SBK template for modern businesses</h1>
+                <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit!</p>
+                <ul class="ulBtns">
+                    <li class="start"><button >Get Started</button></li>
+                    <li class="leran"><button >Learn More</button></li>
+                </ul>
+            </div>
+            <div>
+                <img src="https://dummyimage.com/600x400/343a40/6c757d" alt="img"/>
+            </div>
+        </header>
+        <!-- icon -->
+        <section class="sec1">
+            <div class="block1">
+                <h3>A better way to start building.</h3>
+            </div>
+            <div class="block2">
+                <div class="block">
+                    <p class="pbold">Featured title</p>
+                    <p class="plite">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                </div>
+                <div class="block">
+                    <p class="pbold">Featured title</p>
+                    <p class="plite">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                </div>
+            </div>
+            <div class="block3">
+                <div class="block">
+                    <p class="pbold">Featured title</p>
+                    <p class="plite">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                </div>
+                <div class="block">
+                    <p class="pbold">Featured title</p>
+                    <p class="plite">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                </div>
+            </div>
+        </section>
+        <!-- reviews -->
+        <section class="sec2">
+            <div class="text-italic">
+                <i>"Working with Start Bootstrap templates has saved me tons of development time when building new projects! Starting with a Bootstrap template just makes things easier!"</i>
+            </div>
+            <div class="review-name">
+                <p>Tom Ato <span class="sp-blue">/</span> CEO, Pomodoro</p>
+            </div>
+        </section>
+        <!-- posts -->
+        <section class="sec3">
+            <div class="sect1">
+                <h3>From our blog</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugit ratione dicta mollitia. Officiis ad.</p>
+            </div>
+            <div class="sect2">
+                <div class="card">
+                    <div class="img_cart">
+                        <img src="https://dummyimage.com/600x350/ced4da/6c757d" alt="cart1"/>
+                    </div>
+                    <div class="news pad" >
+                        <p>News</p>
+                    </div>
+                    <div class="cart_title pad"><p>Blog post title</p></div>
+                    <div class="cart_p pad">
+                        <p>
+                            Some more quick example text to build on the card title and make up the bulk of the card's content
+                        </p>
+                    </div>
+                    <div class="cart_profile pad">
+                        <div class="porfile"></div>
+                        <div>
+                            <strong>virat Kohlie</strong>
+                        <p>May 5. 2024 . 10 min read</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="img_cart">
+                        <img src="https://dummyimage.com/600x350/adb5bd/495057" alt="cart1"/>
+                    </div>
+                    <div class="news pad" >
+                        <p>News</p>
+                    </div>
+                    <div class="cart_title pad"><p>Blog post title</p></div>
+                    <div class="cart_p pad">
+                        <p>
+                            Some more quick example text to build on the card title and make up the bulk of the card's content
+                        </p>
+                    </div>
+                    <div class="cart_profile pad">
+                        <div class="porfile"></div>
+                        <div>
+                            <strong>virat Kohlie</strong>
+                        <p>May 5. 2024 . 10 min read</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="img_cart">
+                        <img src="https://dummyimage.com/600x350/6c757d/343a40" alt="cart1"/>
+                    </div>
+                    <div class="news pad" >
+                        <p>News</p>
+                    </div>
+                    <div class="cart_title pad"><p>Blog post title</p></div>
+                    <div class="cart_p pad">
+                        <p>
+                            Some more quick example text to build on the card title and make up the bulk of the card's content
+                        </p>
+                    </div>
+                    <div class="cart_profile pad">
+                        <div class="porfile"></div>
+                        <div>
+                            <strong>virat Kohlie</strong>
+                        <p>May 5. 2024 . 10 min read</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                </div>
+            </div>
+            <div class="sect3">
+                <div class="left">
+                    <h3>New products, delivered to you.</h3>
+                    <p>Sign up for our newsletter for the latest updates.</p>
+                </div>
+                <div class="lerightft">
+                    <div class="left_input">
+                        <input type="text" placeholder="Email address..."/>
+                        <button>Sing up</button>
+                    </div>
+                    <div>
+                        <p>We care about privacy, and will never share your data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer  class="bgblack">
+        <div>
+            Copyright © Your Website 2024
+        </div>
+        <div>
+            <ul class="foot-li">
+                <li>Privacy</li>
+                <li>Terms</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
